@@ -1,5 +1,5 @@
 import express from "express";
-import Connection from "./mongo/data.js";
+import Connection from "./database/data.js";
 import router from "./routes/route.js";
 import cors from "cors";
 import bodyParser from "body-parser";

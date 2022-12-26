@@ -7,7 +7,6 @@ const userSchema = mongoose.Schema({
     
 })
 
-
 const UserModel= mongoose.model('user',userSchema)
 mongoose.set('strictQuery', false)
 export default UserModel
