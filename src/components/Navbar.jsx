@@ -1,9 +1,19 @@
 import React from 'react'
-import { AppBar, Toolbar, styled, } from '@mui/material';
+import {  AppBar,Toolbar, styled } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import UserDetails from './UserDetails';
 
 export const Navbar = () => {
   const [loading,setLoading] = React.useState(false);
+  const Navbar = styled(AppBar)`
+  background : 'gr';
+  `
+  const Btn = styled(NavLink)`
+    margin-left : 20px;
+    color : white;
+    font-size : 20px;
+    text-decoration : none;
+    `
 
   const getUserData = () => {
     if(loading){
@@ -47,15 +57,17 @@ export const Navbar = () => {
 
   return (
     <div style={{ display: "flex" }}>
-      <Navbar position='static' >
-        <Toolbar>
-          <Tabs to="/" onClick={getUserData}>Fetch Data</Tabs>
-          <Tabs to="/" onClick={deleteData}>Delete Data</Tabs>
-          <Tabs to="/userDetails">User Details</Tabs>
+      <Navbar position='static' > 
+         <Toolbar>
+          <Btn to="/" onClick={getUserData}>Fetch Data</Btn>
+          <Btn to="/" onClick={deleteData}>Delete Data</Btn>
+          <Btn to="/userDetails">User Details</Btn>
 
         </Toolbar>
+        
+       
 
-      </Navbar>
+       </Navbar> 
     </div>
   )
 }
