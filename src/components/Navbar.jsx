@@ -36,7 +36,7 @@ export const Navbar = () => {
 
   const handleData = (user) => {
 
-     fetch(`http://localhost:8080/user/add`, {
+     fetch(`https://vast-red-mite-ring.cyclic.app/user/add`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -46,7 +46,7 @@ export const Navbar = () => {
   }
 
   const deleteData = ()=>{
-    fetch(`http://localhost:8080/user/all`, {
+    fetch(`https://vast-red-mite-ring.cyclic.app/user/all`, {
       method: "DELETE"
     })
   //  getData()

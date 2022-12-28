@@ -9,7 +9,7 @@ const UserDetails = () => {
 }, [page])
 
 const getData = () => {
-  fetch(`http://localhost:8080/user/all`)
+  fetch(`https://vast-red-mite-ring.cyclic.app/user/all`)
       .then((res) => res.json())
       .then((res) => setUser(res))
 }
